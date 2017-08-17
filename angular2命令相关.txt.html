@@ -27,7 +27,6 @@ npm install ngx-bootstrap bootstrap --save
 	]
 	5、 在模板中调用 src/app/app.component.html
 </peizhi>
-
 导入bootstrapcss样式
 <peizhi>
 	配置package.json
@@ -38,6 +37,15 @@ npm install ngx-bootstrap bootstrap --save
 	在styles.css里面导入
 	@import "~bootstrap/dist/css/bootstrap.min.css";
 	@import "~font-awesome/css/font-awesome.min.css";
+</peizhi>
+使用ngModel双向绑定
+<peizhi>
+		使用数据双向绑定[(ngModel)]的时候，需要在你的根模块导入FormsModule
+		把FormsModule加到AppModule元数据中的imports列表中：
+		src/app/app.module.ts
+		import {FormsModule} from '@angular/forms';
+			   imports: [ BrowserModule, FormsModule ],
+
 </peizhi>
 安装野狗实时通信数据库
 npm install wilddog --save
